@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:900;
+}
+#precaution{
+  color:rgba(0, 71, 171, 1);
+  font-weight: bolder;
+  margin:15px;
+}
+#markerCoverage{
+  background-color:rgba(255, 192, 61, 1);
+
+  padding: 20px;
+
+}
+hr {
+height:2px;;background-color:darkgray
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-weight: bolder;
+  
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight:900;
+  font-family: Montserrat;
+font-style: normal;
+
+font-size: 18px;
+line-height: 22px;
+
+
+
+color: #2B2D42;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+.itemOfReview
+{
+  word-wrap:break-word;
+  background-color: white;
+  padding: 10px;
+  margin: 20px;
+  
+}
+.NavButtons
+{
+  border-radius: 50%;
+  height: 30px;
+}
+
+
