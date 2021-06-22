@@ -1,29 +1,39 @@
 import React from 'react'
 import './Navigation.css'
 
-var flagSize=0, flagBtn=0;
+
 class Navigation extends React.Component
-{   
+{   constructor()
+    {   super();
+        this.myul=React.createRef();
+        this.mybtn=React.createRef();
+        this.navButtonClicked=this.navButtonClicked.bind(this);
+        this.closeNav=this.closeNav.bind(this);
+    }
     
-    navButtonClicked(){
-        flagBtn=1;
-  }
-closeNav(){
-console.log("here");
-flagBtn=0;
-}
+    navButtonClicked()
+    {
+        this.myul.current.style.display="inline";
+        this.mybtn.current.style.display="none";
+    }
+    closeNav()
+    {
+        console.log("clicked");
+        this.myul.current.style.display="none";
+        this.mybtn.current.style.display="inline";
+    }
 
     render()
     {  
-        if (window.matchMedia("(max-width: 760px)").matches) {
-            flagSize=1
-          } else {
-            flagSize=0;    }
-            var element=0;
+        
+        
+            
     
-    if(flagSize===0)
-    {   
-        element=
+    
+        const element=
+        <div>
+            
+        
         <ul className="onlyForDesktop" style={{padding:"10px"}}>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
@@ -32,25 +42,31 @@ flagBtn=0;
             <li><a href="#homeCareHeroes">Home Care Heroes</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-    }
-    if(flagSize===1 && flagBtn===0)
-    {   element=
-        <button id="navBarButton" onClick={this.navButtonClicked()} ><i class="fa fa-bars"></i></button>
-    }
-   /*  Commented Out because still resolving some errors and problems  
-   if(flagSize===1 && flagBtn===1)
-    {
-        element=
-        <ul >
-            <li> <a href="#close" class="closebtn" onclick={this.closeNav()}>&times;</a></li>
+    
+     
+        <div className="onlyForMobile">
+        <button id="navBarButton" ref={this.mybtn}
+        onClick={() => this.navButtonClicked()} ><i class="fa fa-bars"></i></button>
+    
+     
+
+        <div ref={this.myul} style={{display:"none",top:"0",height:"100%",right:"0",position:"fixed",zIndex:"1",transition:"0.5s",backgroundColor:"rgba(255, 241, 225, 1)"}}>
+            
+        <button onClick={() => this.closeNav()}><i class="fa fa-long-arrow-left"></i></button>
+        
+        <ul>
+            
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#Resources">Resources</a></li>
             <li><a href="#careers" style={{color:"rgba(0, 71, 171, 1)"}}>Careers</a></li>
             <li><a href="#homeCareHeroes">Home Care Heroes</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="tel:8669863356" style={{textDecoration:"none"}} ><i class="fa fa-phone" style={{width:"26px",height:"26px"}}></i> Call us</a></li>
         </ul>
-    }*/
+        </div>
+        </div>
+        </div>
 
         
     const items=
