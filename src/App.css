@@ -18,7 +18,7 @@ hr {
 height:2px;;background-color:darkgray
 }
 
-.itemOfReview
+.itemOfReview_1
 {
   word-wrap:break-word;
   background-color: white;
@@ -34,7 +34,7 @@ height:2px;;background-color:darkgray
   margin: 20px;
   
 }
-.NavButtons
+.NavButton
 {
   border-radius: 50%;
   height: 30px;
