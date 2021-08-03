@@ -1,6 +1,6 @@
 import React from 'react'
-import ReviewItems from './ReviewItems.js'
-import ReviewData from './ReviewData.js'
+import ReviewItems from './SlideItems.js'
+import ReviewData from './SlideData.js'
 
 
 function ReviewContainer(){
