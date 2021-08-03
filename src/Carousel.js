@@ -14,12 +14,12 @@ const abc=
     
 
 <div style={{display:"flex", alignItems:"center"}}>
-<button onClick={previous} className="NavButtons">{'<'}</button>
+<button onClick={previous} className="NavButton">{'<'}</button>
 <div style={{display: "flex",overflow:"hidden" }}>
  
     <CarouselContainer/>
 </div>
-<button onClick={next} className="NavButtons">{'>'}</button>
+<button onClick={next} className="NavButton">{'>'}</button>
 </div>
 </div>
 return(abc)
