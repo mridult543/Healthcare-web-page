@@ -1,6 +1,6 @@
 import React from 'react'
-import ReviewContainer from './ReviewContainer'
-import ReviewData from './ReviewData.js'
+import ReviewContainer from './SlideContainer'
+import ReviewData from './SlideData.js'
 const len=ReviewData.length;
 function Review(){
 var total=0;
