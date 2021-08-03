@@ -23,12 +23,12 @@ function ReviewItems(props)
     
     
     
-        const idValue= "itemOfReview"+props.idNo;
+        const idValue= "itemOfReview_1"+props.idNo;
         console.log(props.idNo);
     
     
    const item= 
-   <div className="itemOfReview" id={idValue} style={sty}>
+   <div className="itemOfReview_1" id={idValue} style={sty}>
        <div style={{padding:"10px"}}>
            
        
