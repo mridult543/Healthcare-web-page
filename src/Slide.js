@@ -14,7 +14,7 @@ const abc=
     
 
 <div style={{display:"flex", alignItems:"center"}}>
-<button onClick={previous} className="NavButtons">{'<'}</button>
+<button onClick={previous} className="NavButton">{'<'}</button>
 <div style={{display: "flex",overflow:"hidden" }}>
    
     
@@ -25,7 +25,7 @@ const abc=
     </div>
     <ReviewContainer/>
 </div>
-<button onClick={next} className="NavButtons">{'>'}</button>
+<button onClick={next} className="NavButton">{'>'}</button>
 </div>
 </div>
 return(abc)
@@ -38,7 +38,7 @@ function next()
 {
   val++;
   for(var i=1;i<=len;i++)
-  {   var idNum= "itemOfReview"+i;
+  {   var idNum= "itemOfReview_1"+i;
   if(i<(val-3)|| i>val)
       document.getElementById(idNum).style.display="none";
       else
@@ -49,7 +49,7 @@ function previous()
 {
   val--;
   for(var i=1;i<=len;i++)
-  {   var idNum= "itemOfReview"+i;
+  {   var idNum= "itemOfReview_1"+i;
   if(i<(val-3)|| i>val)
       document.getElementById(idNum).style.display="none";
       else
